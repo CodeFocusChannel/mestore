@@ -1,0 +1,15 @@
+@import "./../styles/variables.scss";
+
+.home__container {
+    &.light__mode {
+        background: $white;
+    }
+    &.dark__mode {
+        background: $dark;
+    }
+}
+
+.home {
+    max-width: 1920px;
+    margin: 0 auto;
+}

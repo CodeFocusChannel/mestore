@@ -1,0 +1,116 @@
+@import "./../../../styles/variables.scss";
+
+.earnings {
+    width: 100%;
+    min-width: 900px;
+    padding: 32px;
+    border-radius: $borderRadius;
+
+    &.light__mode {
+        background: $white;
+        border: 1px solid $dividerLineLight;
+    }
+
+    &.dark__mode {
+        background: $lightBlack;
+        border: 1px solid $dividerLine;
+    }
+
+    &__headline {
+        display: flex;
+        margin-bottom: 24px;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title {
+            font-size: 20px;
+            line-height: 25px;
+            font-weight: 700;
+            letter-spacing: $letterSpacing;
+
+            &.light__mode {
+                color: $black;
+            }
+            &.dark__mode {
+                color: $white;
+            }
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+
+            .legend {
+                display: flex;
+                margin-right: 48px;
+
+                &__item {
+                    display: flex;
+                    align-items: center;
+
+                    &:not(:last-child) {
+                        margin-right: 24px;
+                    }
+
+                    span {
+                        font-weight: 700;
+                        font-size: 1rem;
+                        letter-spacing: $letterSpacing;
+                        &.light__mode {
+                            color: $black;
+                        }
+                        &.dark__mode {
+                            color: $white;
+                        }
+                    }
+
+                    div {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        margin-right: 12px;
+                    }
+                    div.green {
+                        background: $green;
+                    }
+                    div.orange {
+                        background: $orange;
+                    }
+                }
+            }
+
+            .filter {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 8px 16px;
+                border-radius: $borderRadius;
+                span {
+                    margin-right: 4px;
+                }
+
+                &.light__mode {
+                    background: $lightGray;
+
+                    span {
+                        color: $darkGray;
+                    }
+                }
+                &.dark__mode {
+                    background: $lightBlack2;
+
+                    span {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    &__chart {
+        display: flex;
+        height: 350px;
+        margin-bottom: 24px;
+    }
+}

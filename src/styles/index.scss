@@ -1,0 +1,16 @@
+@import "./reset.scss";
+@import "./variables.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    font-family: $mulish;
+}
+
+#root {
+    height: 100%;
+}

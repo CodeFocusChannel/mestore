@@ -1,0 +1,147 @@
+@import "./../../styles/variables.scss";
+
+.appbar__container {
+    width: $appbarwidth;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+
+    &.light__mode {
+        border-right: 1px solid $dividerLineLight;
+        background: $white;
+    }
+    &.dark__mode {
+        border-right: 1px solid $dividerLine;
+        background: $dark;
+    }
+}
+
+.appbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+
+    &__logo {
+        display: flex;
+        width: 140px;
+        height: 42px;
+        margin-bottom: 40px;
+
+        &__rect {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(180deg, #33c863 0%, #51ed83 51.09%, #2cbd5b 100%);
+            margin: 0 12px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            border-radius: 50px 50px 50px 8px;
+            color: $white;
+        }
+        .light__mode {
+            color: $white;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: $letterSpacing;
+            font-weight: 800;
+            color: $green;
+
+            .light__mode {
+                color: $dark;
+            }
+
+            .dark__mode {
+                color: $white;
+            }
+        }
+    }
+
+    &__menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+
+            border-left: 4px solid transparent;
+            width: 100%;
+            &.isActive {
+                border-left-color: $green;
+            }
+
+            .link {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                padding: 16px 16px 16px 19px;
+
+                &__icon {
+                    width: 24px;
+                    height: 24px;
+                    margin: 0 12px 0 0;
+                    display: flex;
+                    align-items: center;
+                }
+
+                &__text {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    line-height: 20px;
+
+                    &.light__mode {
+                        color: $darkGray;
+                    }
+                    &.dark__mode {
+                        color: $white;
+                    }
+                }
+            }
+
+            &.isActive .link {
+                &__text {
+                    color: $green;
+                }
+            }
+        }
+    }
+
+    &__divider {
+        margin: 40px 0;
+        width: 100%;
+        height: 1px;
+        &.light__mode {
+            background: $dividerLineLight;
+        }
+        &.dark__mode {
+            background: $dividerLine;
+        }
+    }
+
+    &__themetoggler {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 16px 16px 16px 24px;
+
+        .toggle__title {
+            margin-left: 12px;
+            line-height: 20px;
+
+            &.light__mode {
+                color: $darkGray;
+            }
+            &.dark__mode {
+                color: $white;
+            }
+        }
+    }
+}

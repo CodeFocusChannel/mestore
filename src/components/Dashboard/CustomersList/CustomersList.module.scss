@@ -1,0 +1,93 @@
+@import "./../../../styles/variables.scss";
+
+.customerslist {
+    flex: 2;
+    height: 100%;
+    border-radius: $borderRadius;
+    padding: 32px;
+
+    &.light__mode {
+        background: $white;
+        border: 1px solid $dividerLineLight;
+    }
+    &.dark__mode {
+        background: $lightBlack;
+        border: 1px solid $dividerLine;
+    }
+
+    &__header {
+        display: flex;
+        margin-bottom: 24px;
+
+        &__title {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: $letterSpacing;
+            line-height: 25px;
+
+            &.light__mode {
+                color: $black;
+            }
+
+            &.dark__mode {
+                color: $white;
+            }
+        }
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+
+            &__img {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                margin-right: 12px;
+
+                .img {
+                    border-radius: 50%;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    letter-spacing: $letterSpacing;
+
+                    &.dark__mode {
+                        color: $white;
+                    }
+                }
+
+                .name {
+                    font-size: 1rem;
+                    line-height: 20px;
+                    margin-bottom: 8px;
+                    font-weight: 800;
+
+                    &.light__mode {
+                        color: $black;
+                    }
+                }
+                .email {
+                    line-height: 17px;
+                    font-size: 14px;
+
+                    &.light__mode {
+                        color: $darkGray;
+                    }
+                }
+            }
+        }
+    }
+}

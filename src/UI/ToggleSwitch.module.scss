@@ -1,0 +1,30 @@
+@import "./../styles/variables.scss";
+
+.switch {
+    width: 56px;
+    height: 24px;
+    border-radius: 50px;
+    background: $bg;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &.on {
+        background: $green;
+    }
+
+    &.on &__thumb {
+        left: 56px - 20px - 2px;
+    }
+
+    &__thumb {
+        background: $white;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        border-radius: 50%;
+        transition: left 0.3s ease;
+    }
+}
